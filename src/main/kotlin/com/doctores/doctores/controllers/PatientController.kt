@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping
 
 @RestController
 class PatientController {
-    @GetMapping()
+    @GetMapping(Patient)
     fun getAllPatients(): ResponseEntity<HealthCheckResponse> = ResponseEntity(HealthCheckResponse(), HttpStatus.OK)
     @PostMapping(CreatePatients)
     fun createPatient(): ResponseEntity<HealthCheckResponse> = ResponseEntity(HealthCheckResponse(), HttpStatus.OK)
