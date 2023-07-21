@@ -13,6 +13,15 @@ class DoctorService {
     @Autowired
     private lateinit var doctorRepository: DoctorRepository
     fun createDoctor(request: CreateDoctorRequest): CreateDoctorResponse{
+        val doctor =  doctorRepository.save(
+            Doctor(
+                nombre = request.nombre,
+                apellido = request.apellido,
+                especialidad = request.especialidad,
+                correo = request.correo,
+                consultorio = request.consultorio,
+            )
+        )
         return CreateDoctorResponse(
             idDoctor = 1,
             nombre = request.nombre,

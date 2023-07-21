@@ -1,8 +1,10 @@
 package com.doctores.doctores.domains.entity
 
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories
+import jakarta.persistence.Entity
+import jakarta.persistence.Id
+import jakarta.persistence.*
 import java.time.Instant
-import javax.persistence.*
+
 
 @Entity
 @Table(name = "doctores")
@@ -12,7 +14,7 @@ open class Doctor (
     @Column(name="id_doctor")
     open var idDoctor: Long=0,
 
-    /*@Column(name="nombre")
+    @Column(name="nombre")
     open var nombre: String,
 
     @Column(name="apellido")
@@ -28,6 +30,6 @@ open class Doctor (
     open var correo: String?="",
 
     @Column(name="created_at")
-    open var createdAt: Instant = Instant.now(),*/
+    open var createdAt: Instant = Instant.now(),
 
 )
