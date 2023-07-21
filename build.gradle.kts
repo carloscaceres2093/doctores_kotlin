@@ -34,7 +34,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.batch:spring-batch-test")
 	implementation("javax.validation:validation-api:1.0.0.GA")
-	implementation("javax.persistence:javax.persistence-api:2.2")
+
 }
 
 tasks.withType<KotlinCompile> {
